@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://desci.pub
+
+# Sitemaps
+Sitemap: https://desci.pub/sitemap.xml
