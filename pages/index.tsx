@@ -6,16 +6,18 @@ export const config = {
   unstable_runtimeJS: false,
 }
 
+const DESCRIPTION = "Publishing and review today are broken. We're building a new research economy.";
+
 const HomePage = () => {
   return (
     <>
       <NextSeo
         title="DeSci"
-        description="DeSci Home Page"
+        description={DESCRIPTION}
         canonical="https://desci.pub/"
         openGraph={{
           title: 'DeSci',
-          description: 'DeSci Home Page',
+          description: DESCRIPTION,
           url: 'https://desci.pub',
           site_name: 'DeSci',
         }}
