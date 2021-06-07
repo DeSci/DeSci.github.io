@@ -1,3 +1,4 @@
 # DeSci Web Frontend
 
-Preview: `yarn dev`.
+* Preview: `yarn dev`
+* Deploy: `yarn deploy`

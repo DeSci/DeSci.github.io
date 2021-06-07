@@ -1,96 +1,10 @@
 import { NextSeo } from 'next-seo';
-import styled from 'styled-components';
+
+import Footer from '@/components/Footer';
 
 export const config = {
   unstable_runtimeJS: false,
 }
-
-const SANS_FAMILY = `Inter, ui-sans-serif, system-ui, -apple-system,
-  BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-  "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol", "Noto Color Emoji"`;
-
-const StyledTitle = styled.h1`
-  font-family: ${SANS_FAMILY};
-
-  font-size: 6rem;
-  margin: 4rem auto;
-  pointer-events: none;
-  white-space: wrap;
-  overflow-wrap: normal;
-  max-width: 900px;
-  text-align: center;
-  color: rgb(31,41,55);
-
-  @media (max-width: 1024px) {
-    margin: 2rem 0 3rem 0;
-    font-size: 3rem;
-  }
-  @media (max-width: 640px) {
-    width: 100%;
-    margin: 2rem 0 2rem 0;
-    font-weight: 500;
-  }
-  @media (max-width: 440px) {
-    font-weight: 500;
-    font-size: 2.25rem;
-  }
-`;
-
-const StyledSubtitle = styled.h1`
-  font-family: ${SANS_FAMILY};
-
-  font-size: 1.875rem;
-  margin: 4rem auto;
-  white-space: wrap;
-  overflow-wrap: normal;
-  max-width: 900px;
-  text-align: center;
-  color: rgb(107,114,128);
-
-  @media (max-width: 1024px) {
-    margin: 2rem 0 3rem 0;
-  }
-  @media (max-width: 640px) {
-    width: 100%;
-    margin: 2rem 0 2rem 0;
-    font-weight: 500;
-  }
-  @media (max-width: 440px) {
-    font-weight: 500;
-    font-size: 1.25rem;
-  }
-`;
-
-export const FooterColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin: 0 1rem;
-`;
-
-export const FooterRow = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 
-                         minmax(8rem, 1fr));
-  grid-gap: 21px;
-  max-width: 900px;
-  margin: 0 auto;
-`;
-
-export const FooterLink = styled.a`
-  font-family: ${SANS_FAMILY};
-  font-size: 14px;
-  color: rgb(31, 41, 55);
-  text-decoration: none;
-`;
-
-export const FooterHeading = styled.p`
-  font-family: ${SANS_FAMILY};
-  font-size: 16px;
-  color: rgb(17, 24, 39);
-  font-weight: bold;
-`;
 
 const HomePage = () => {
   return (
@@ -111,22 +25,62 @@ const HomePage = () => {
           cardType: 'summary',
         }}
       />
-      <StyledTitle>DeSci</StyledTitle>
-      <StyledSubtitle>Building Decentralized Science</StyledSubtitle>
-      <hr />
-      <FooterRow>
-        <FooterColumn>
-          <FooterHeading>Community</FooterHeading>
-          <FooterLink href="https://github.com/DeSci" target="_blank">GitHub &#8599;</FooterLink>
-          <FooterLink href="https://twitter.com/DeSciPub" target="_blank">Twitter &#8599;</FooterLink>
-          <FooterLink href="https://discord.gg/mgTdFFPvVN" target="_blank">Discord &#8599;</FooterLink>
-          <FooterLink href="https://www.reddit.com/r/DeSci/" target="_blank">Reddit &#8599;</FooterLink>
-        </FooterColumn>
-        <FooterColumn>
-          <FooterHeading>About Us</FooterHeading>
-          <FooterLink href="mailto:contact@desci.pub">contact@desci.pub</FooterLink>
-        </FooterColumn>
-      </FooterRow>
+      <header>
+        <div id="homepage-hero">
+          <div id="homepage-hero-container">
+            <div id="homepage-hero-content">
+              <h1 id="homepage-title" className="homepage-hero-text">DeSci</h1>
+              <h2 className="homepage-hero-text">Building a new research economy</h2>
+              <a className="hero-link" href="https://discord.gg/mgTdFFPvVN" target="_blank">
+                Coming soon - join Discord for updates
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div className="homepage-content">
+        <div className="responsive-width">
+          <h2>Publishing and review today are broken.</h2>
+          Long and opaque review processes using unpaid labor stall progress.
+          At the same time, hefty publication fees and subscription fees eat away at funding,
+          and the centralization of grantmaking and editorial decisions leaves great research unrecognized.
+        </div>
+      </div>
+      <div className="homepage-content">
+        <div className="responsive-width">
+          <h2>We’re returning power to the community.</h2>
+          Readers decide what research is valuable, and authors capture the reward - not intermediaries.
+        </div>
+      </div>
+      <div className="homepage-content">
+        <div className="responsive-width">
+          <h2>No matter the contribution</h2>
+          Whether it’s peer review, replication, refutation, surveying,
+          or summarizing - any value created should be recognized and rewarded.
+        </div>
+      </div>
+      <div className="homepage-content">
+        <div className="responsive-width">
+          <h2>Science for everyone</h2>
+          Ideas should be judged by merit, not pedigree. DeSci is open-access,
+          and everyone is welcome to give feedback and submit work for community feedback.
+        </div>
+      </div>
+      <div className="homepage-content">
+        <div className="responsive-width">
+          <h2>Fund exciting projects</h2>
+          Whether it’s creating a new prize, calling for research related to a protocol,
+          or placing a bounty on a problem of personal interest, DeSci enables it.
+        </div>
+      </div>
+      <div className="homepage-content">
+        <div className="responsive-width">
+          <h2>Expand your philanthropic portfolio</h2>
+          DeSci enables public patronage of research through NFTs (non-fungible tokens).
+          Curate quality research and be a part of history.
+        </div>
+      </div>
+      <Footer />
     </>
   )
 };
