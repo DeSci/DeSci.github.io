@@ -11,7 +11,7 @@
     "deploy": "rm -rf node_modules/.cache && rimraf out && yarn export && touch out/.nojekyll && echo 'desci.pub' > out/CNAME && gh-pages -d out -t true"
   },
   "dependencies": {
-    "next": "10.2.3",
+    "next": "11.1.3",
     "next-seo": "^4.24.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
